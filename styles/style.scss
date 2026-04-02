@@ -30,9 +30,12 @@ header {
       flex-direction: row;
     }
     li {
-      color: black;
+      color: rgb(56, 56, 56);
       margin-right: 25px;
       font-size: 20px;
+      &:hover{
+        color: black;
+      }
     }
     .contacto {
       padding: 10px 15px;
@@ -51,13 +54,21 @@ header {
 body {
   background-color: rgb(233, 233, 233);
 
+
+  
+
   main {
-    
+
+
+    .hidden{
+      display: none;
+    }
+
     section {
-        padding: 0 40px;
+      padding: 0 40px;
     }
     .hero {
-        padding-right: 0;
+      padding-right: 0;
       height: calc(100dvh - 79px);
       display: flex;
       flex-direction: row;
@@ -76,112 +87,216 @@ body {
           width: 50%;
           color: rgba(0, 0, 0, 0.669);
         }
-        .visitanos{
-            font-size: 16px;
-            margin-top: 10px;
-            padding: 15px 20px;
-            background-color: #134f85;
-            color: white;
-            border: none;
-            cursor: pointer;
-            &:hover{
-                background-color: #10416e;
-            }
-            
+        .visitanos {
+          font-size: 16px;
+          margin-top: 10px;
+          padding: 15px 20px;
+          background-color: #134f85;
+          color: white;
+          border: none;
+          cursor: pointer;
+          &:hover {
+            background-color: #10416e;
+          }
         }
-        .tools{
-                display: flex;
-                flex-direction: row;
-                margin-top: 30px;
-                width: 100%;
-                overflow-x: auto;
-                &::-webkit-scrollbar{
-                        display: none;
-                    }
-                .group{
-                    display: flex;
-                    flex-direction: row;
-                    gap: 22px;
-                    animation: spin 10s infinite linear;
-                    padding-right: 22px;
-                    
-                    .card{
-                        transition: 0.2s;
-                        min-width: 85px;
-                        height: 70px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 3px;
-                        border-radius: 5px;
-                        cursor: pointer;
-                        .icon{
-                            color: rgb(78, 78, 78);
-                        }
-                        &:hover{
-                            
-                            font-size: 18px;
-                            color: #134f85;
-                            .icon{
-                                font-size: 18px;
-                                color: #134f85;
-                            }
-                        }
-                    }
+        .tools {
+          display: flex;
+          flex-direction: row;
+          margin-top: 30px;
+          width: 100%;
+          overflow-x: auto;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+          .group {
+            display: flex;
+            flex-direction: row;
+            gap: 22px;
+            animation: spin 10s infinite linear;
+            padding-right: 22px;
+
+            .card {
+              transition: 0.2s;
+              min-width: 85px;
+              height: 70px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 3px;
+              border-radius: 5px;
+              cursor: pointer;
+              .icon {
+                color: rgb(78, 78, 78);
+              }
+              &:hover {
+                font-size: 18px;
+                color: #134f85;
+                .icon {
+                  font-size: 18px;
+                  color: #134f85;
                 }
+              }
             }
-            .distribuidor{
-                
-                display: flex;
-                margin-top: 15px;
-                gap: 5px;
-                font-size: 12px;
-                align-items: flex-end;
-                p{
-                    font-family: Arial, Helvetica, sans-serif;
-                    padding-bottom: 6px;
-                    color: black;
-                }
-                svg{
-                    font-size: 24px;
-                }
-            }
+          }
+        }
+        .distribuidor {
+          display: flex;
+          margin-top: 15px;
+          gap: 5px;
+          font-size: 12px;
+          align-items: flex-end;
+          p {
+            font-family: Arial, Helvetica, sans-serif;
+            padding-bottom: 6px;
+            color: black;
+          }
+          svg {
+            font-size: 24px;
+          }
+        }
       }
       .images {
         width: 50%;
         display: flex;
         height: 100%;
-        .carousel{
-            flex: 1;
-            img{
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
+        .carousel {
+          flex: 1;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
         }
       }
     }
 
+    .nosotros {
+      height: 100vh;
+      background-color: rgb(241, 241, 241);
+      width: 100%;
+      &-text {
+        padding-top: 50px;
+        width: 100%;
+        height: 100%;
+        h2 {
+          color: black;
+          font-size: 3.5em;
+          margin-bottom: 30px;
+          text-align: center;
+        }
 
+        &-content {
+          width: 100%;
+          height: 65%;
+          display: flex;
+          border: 1px solid rgb(218, 218, 218);
+          border-radius: 15px;
 
+          gap: 40px;
+          overflow: hidden;
+          .reviews {
+            flex: 1;
+            padding: 25px 45px 0 0;
+            p {
+              text-align: justify;
 
-    .reviews{
-        height: 100vh;
-        background-color: #072642;
+              color: rgb(54, 54, 54);
+              font-size: 1.4em;
+            }
+            &-container {
+              margin-top: 25px;
+              width: 100%;
+              
+              &-group {
+                position: relative;
+                height: 100px;
+                .card {
+                  position: relative;
+                  height: 100%;
+                  .user {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 5px;
+                    svg {
+                      width: 24px;
+                      height: 24px;
+                      color: rgb(114, 114, 114);
+                    }
+                    p {
+                      font-size: 15px;
+                      font-family: Oswald;
+                    }
+                  }
+                  span {
+                    margin-top: 15px;
+                    color: #717171;
+                    position: relative;
+                    &::after {
+                      content: "★★★★★";
+                      position: absolute;
+                      color: rgb(255, 191, 0);
+                      width: var(--rating);
+                      top: 0;
+                      left: 0;
+                      z-index: 10;
+                      overflow: hidden;
+                    }
+                  }
+                  p {
+                    font-size: 13px;
+                    font-weight: 500;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: black;
+                    max-width: 80%;
+                    
+                  }
+                }
+                #btnright {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  position: absolute;
+                  right: 10px;
+                  top: 50%;
+                  cursor: pointer;
+                  background-color: rgb(227, 227, 227);
+                  border: none;
+
+                  height: 30px;
+                  width: 30px;
+                  border-radius: 50%;
+                  &:hover{
+                    background-color: rgb(213, 213, 213);
+                  }
+                }
+              }
+            }
+          }
+
+          .mazatlan {
+            flex: 1.2;
+            border-radius: 15px;
+            object-fit: cover;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
     }
-
   }
 }
 
-
 @keyframes spin {
-    from{
-        translate: 0;
-    } to {
-        translate: -100%;
-    }
-    
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
 }
 
 @font-face {
