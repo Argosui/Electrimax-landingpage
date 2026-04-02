@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Oswald, sans-serif;
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px 0 20px;
+  background-color: white;
+  height: 79px;
+}
+header .logo {
+  width: 170px;
+}
+header .lista {
+  display: flex;
+  flex-direction: row;
+}
+header .lista ul {
+  display: flex;
+  flex-direction: row;
+}
+header .lista li {
+  color: black;
+  margin-right: 25px;
+  font-size: 20px;
+}
+header .lista .contacto {
+  padding: 10px 15px;
+  background-color: #134f85;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+header .lista .contacto:hover {
+  background-color: #10416e;
+}
+
+body {
+  background-color: rgb(233, 233, 233);
+}
+body main section {
+  padding: 0 40px;
+}
+body main .hero {
+  padding-right: 0;
+  height: calc(100dvh - 79px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .hero .hero-text {
+  padding-top: 50px;
+  height: 100%;
+  width: 45%;
+}
+body main .hero .hero-text h2 {
+  font-size: 60px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+body main .hero .hero-text p {
+  width: 50%;
+  color: rgba(0, 0, 0, 0.669);
+}
+body main .hero .hero-text .visitanos {
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 15px 20px;
+  background-color: #134f85;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+body main .hero .hero-text .visitanos:hover {
+  background-color: #10416e;
+}
+body main .hero .hero-text .tools {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  width: 100%;
+  overflow-x: auto;
+}
+body main .hero .hero-text .tools::-webkit-scrollbar {
+  display: none;
+}
+body main .hero .hero-text .tools .group {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+  animation: spin 10s infinite linear;
+  padding-right: 22px;
+}
+body main .hero .hero-text .tools .group .card {
+  transition: 0.2s;
+  min-width: 85px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+body main .hero .hero-text .tools .group .card .icon {
+  color: rgb(78, 78, 78);
+}
+body main .hero .hero-text .tools .group .card:hover {
+  font-size: 18px;
+  color: #134f85;
+}
+body main .hero .hero-text .tools .group .card:hover .icon {
+  font-size: 18px;
+  color: #134f85;
+}
+body main .hero .hero-text .distribuidor {
+  display: flex;
+  margin-top: 15px;
+  gap: 5px;
+  font-size: 12px;
+  align-items: flex-end;
+}
+body main .hero .hero-text .distribuidor p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 6px;
+  color: black;
+}
+body main .hero .hero-text .distribuidor svg {
+  font-size: 24px;
+}
+body main .hero .images {
+  width: 50%;
+  display: flex;
+  height: 100%;
+}
+body main .hero .images .carousel {
+  flex: 1;
+}
+body main .hero .images .carousel img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main .reviews {
+  height: 100vh;
+  background-color: #072642;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("../assets/fonts/Oswald/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}/*# sourceMappingURL=style.css.map */
