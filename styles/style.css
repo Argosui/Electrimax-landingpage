@@ -52,8 +52,9 @@ header .lista .contacto:hover {
 body {
   background-color: rgb(233, 233, 233);
 }
-body main .hidden {
-  display: none;
+body main .active {
+  display: block !important;
+  animation: slide 0.4s linear;
 }
 body main section {
   padding: 0 40px;
@@ -181,6 +182,7 @@ body main .nosotros-text-content {
   width: 100%;
   height: 65%;
   display: flex;
+  background-color: white;
   border: 1px solid rgb(218, 218, 218);
   border-radius: 15px;
   gap: 40px;
@@ -201,11 +203,13 @@ body main .nosotros-text-content .reviews-container {
 }
 body main .nosotros-text-content .reviews-container-group {
   position: relative;
-  height: 100px;
+  height: 120px;
+  overflow-x: hidden;
 }
 body main .nosotros-text-content .reviews-container-group .card {
   position: relative;
   height: 100%;
+  display: none;
 }
 body main .nosotros-text-content .reviews-container-group .card .user {
   display: flex;
@@ -272,7 +276,171 @@ body main .nosotros-text-content .mazatlan img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+body main .nosotros-text .stars {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  align-items: baseline;
+  margin-top: 5px;
+  gap: 3px;
+}
+body main .nosotros-text .stars span {
+  position: relative;
+  color: #717171;
+}
+body main .nosotros-text .stars span::after {
+  content: "★★★★★";
+  position: absolute;
+  color: rgb(255, 191, 0);
+  width: 95%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 10;
+}
+body main .nosotros-text .stars p {
+  font-size: 14px;
+}
+body main .historia {
+  height: 150vh;
+  padding-top: 40px;
+  width: 100%;
+  background-color: white;
+}
+body main .historia p {
+  color: rgb(48, 48, 48);
+}
+body main .historia h2 {
+  width: 100%;
+  display: block;
+  font-size: 3.2em;
+  padding-bottom: 15px;
+}
+body main .historia-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+body main .historia-container h2 {
+  font-size: 2em;
+}
+body main .historia-container-text {
+  width: 40%;
+}
+body main .historia-container-text p {
+  font-size: 1.2em;
+}
+body main .historia-container-mision {
+  width: 40%;
+}
+body main .historia-container-mision div {
+  width: 100%;
+}
+body main .historia-container-img {
+  width: 60%;
+  font-size: 2em;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+body main .historia-container-img img {
+  width: 90%;
+}
+body main .historia-mision {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body main .historia-mision div {
+  width: 45%;
+}
+body main .historia-mision div h3 {
+  font-size: 2.8em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+body main .historia-mision div p {
+  font-size: 1.2em;
+  text-align: justify;
+}
+body main .historia-mision div .svg {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+body main .historia-mision div .svg-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #717171 7px solid;
+  cursor: pointer;
+}
+body main .historia-mision div .svg-circle svg {
+  color: #717171;
+  margin-bottom: 15px;
+}
+body main .historia-mision div .svg-circle .ojo {
+  margin-bottom: 0;
+  font-weight: 100;
+}
+body main .historia-mision div .svg-circle:hover {
+  background-color: #134f85;
+  border: none;
+}
+body main .historia-mision div .svg-circle:hover svg {
+  color: white;
+}
+body main .sucursales {
+  height: 100vh;
+  padding-top: 20px;
+}
+body main .sucursales h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  display: block;
+}
+body main .sucursales .direccion {
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+}
+body main .sucursales .direccion iframe {
+  width: 40%;
+}
+body main .sucursales .direccion-text {
+  padding: 15px;
+}
+body main .sucursales .direccion-text h3 {
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+body main .sucursales .direccion-text p {
+  font-size: 1.6em;
+}
+body main .sucursales .direccion-text .horario {
+  color: rgb(59, 59, 59);
+  font-size: 1.4em;
+}
 
+@keyframes slide {
+  from {
+    translate: 100%;
+  }
+  to {
+    translate: 0;
+  }
+}
 @keyframes spin {
   from {
     translate: 0;
