@@ -453,6 +453,11 @@ body {
             color: rgb(59, 59, 59);
             font-size: 1.4em;
           }
+          &-horario{
+            display: flex;
+            flex-direction: row;
+            gap: 40%;
+          }
           
         }
       }
