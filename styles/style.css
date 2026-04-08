@@ -36,7 +36,10 @@
   color: inherit;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   background-color: var(--bg);
@@ -792,14 +795,15 @@ footer {
     background: white;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 80px 32px 40px;
     gap: 12px;
     box-shadow: -8px 0 32px rgba(0,0,0,0.12);
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.4s;
     z-index: 105;
+    visibility: hidden;
   }
-  .lista.open { right: 0; }
+  .lista.open { right: 0; visibility: visible; }
   .lista ul { flex-direction: column; gap: 6px; width: 100%; }
   .lista li a { display: block; font-size: 20px; padding: 10px 14px; }
 
